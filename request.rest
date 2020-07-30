@@ -1,0 +1,48 @@
+GET http://localhost:3000/users
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name" : "Sam",
+    "password":"password"
+}
+
+###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "name" : "Sam",
+    "password": "password"
+}
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2FtcmlkZGhpIiwiaWF0IjoxNTk2MDkyNjM1LCJleHAiOjE1OTYwOTI3MjV9.hqHfYKLFatYOaOf5uSFJEaTcV1txcc89TqUC270SUx0
+###
+
+POST  http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2FtcmlkZGhpIiwiaWF0IjoxNTk2MDkyOTAwfQ.JFBpoCjy4I4Cg66GFbF3M1FJkMsQnnqA8YU6ZRReb1o"
+}
+
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+{
+  "token" : 
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2FtcmlkZGhpIiwiaWF0IjoxNTk2MDkzMDM3LCJleHAiOjE1OTYwOTMxMjd9.PwsT2ruDEOA307a6OZ2XNqHr7UDz4kvmdqbt32pVuIU"
+}
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "username"  :  "Samriddhi"
+}
